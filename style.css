@@ -3,18 +3,25 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: #eaf4f4;
 }
 html,
 body {
   width: 100%;
   height: 100%;
   font-family: "Gabarito", sans-serif;
+  background-image: url(./Images/jon-koop-khYVyHiNZo0-unsplash.jpg);
+  background-size: cover;
+  object-fit: contain;
+  background-position: center;
+  /* background-repeat: no-repeat; */
 }
 .nav {
   display: flex;
   width: 100%;
   height: 120px;
-  background-color: rgba(32, 178, 171, 0.44);
+  background-color: rgba(0, 0, 0, 0.500);
+  /* background: transparent; */
   align-items: center;
   justify-content: space-between;
   padding: 20px;
@@ -36,6 +43,7 @@ body {
 .logo {
   height: 75px;
   width: 75px;
+  z-index: 99;
 }
 .logo img {
   height: 75px;
@@ -57,16 +65,281 @@ body {
   border-radius: 20px;
   display: none;
   transform: all ease 0.5s;
+  z-index: 99;
 }
 .menubox h2{
   padding-bottom: 20px;
+  color: #333;
+}
+.content{
+  background: transparent;
+  height: 100vh;
+  width: 100%;
+}
+.about{
+  position: absolute;
+  display: flex;
+  /* align-items: center;
+  justify-content: center; */
+  height: 100vh;
+  width: 100%;
+  border-bottom: 2px solid gray;
+  background: transparent;
+  /* display: none; */
+  /* background-image: url(./Images/jon-koop-khYVyHiNZo0-unsplash.jpg);
+  background-size: cover;
+  object-fit: contain;
+  background-position: center; */
+}
+.para{
+  height: 100%;
+  width: 50%;
+  text-align: justify;
+  font-size: 20px;
+  padding: 15px;
+  color: black;
+  background-color: gray;
+  background: transparent;
+}
+.para h1{
+  position: relative;
+width: 30%;
+font-size: 50px;
+font-weight: 600;
+margin-bottom: 20px;
+background: transparent;
+/* background-color: blue; */
+}
+.para h1::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 5px;
+  width: 0%;
+  background-color: whitesmoke;
+  transition: all ease 0.5s;
+}
+.para h1:hover::after{
+  width: 100%;
+}
+.para p{
+  margin-bottom: 20px;
+}
+.imge{
+  height: 100%;
+  width: 50%;
+  background: transparent;
+  overflow: hidden;
+  /* background-color: aquamarine; */
+}
+.knowBtn{
+  font-size: 30px;
+  margin-top: 30px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 40px;
+  color: white;
+  background-color: black;
+  transition:all ease-in-out 0.4s;
+}
+.knowBtn:hover{
+  transition:all ease-in-out 0.4s;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.727);
+  background-color: whitesmoke;
+
+}
+.knowBtn:active{
+  transform: scale(0.9);
+}
+.carImage{
+  height: 100vh;
+  border-radius: 10px;
+  background: transparent;
+  overflow: hidden;
+}
+.explore{
+  position: absolute;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  height: 100vh;
+  width: 100%;
+  border-bottom: 2px solid gray;
+   /* background-image: url(./Images/zan-1BWBiUUT-AA-unsplash.jpg);
+  background-size: cover;
+  object-fit: contain;
+  background-position: center; */
+  background-color: rgba(0, 0, 0, 0.54);
+  /* background: transparent; */
+  display: none;
+}
+.card{
+  height: 400px ;
+  width: 350px;
+  margin-top: 100px;
+  border: 3px solid black;
+  background-color: beige;
+  border-radius: 20px;
+  overflow: hidden;
+  background: transparent;
+  transition: all ease-in-out 0.3s;
+}
+.card:hover{
+  transform: scale(1.1);
+  transition: all ease-in-out 0.3s;
+}
+.imgCont1{
+  height: 220px;
+  width: 100%;
+  background-image: url(./Images/X1.jpg);
+  background-size: cover;
+  object-fit: contain;
+  border-bottom: 3px solid #333;
+}
+.imgCont2{
+  height: 220px;
+  width: 100%;
+  background-image: url(./Images/7\ Series.jpg);
+  background-size: cover;
+  object-fit: contain;
+  border-bottom: 3px solid #333;
+}
+.imgCont3{
+  height: 220px;
+  width: 100%;
+  background-image: url(./Images/Z4.jpg);
+  background-size: cover;
+  object-fit: contain;
+  border-bottom: 3px solid #333;
+}
+.paraCont{
+  height: 180px;
+  width: 100%;
+  background: transparent;
+  background-color: rgba(0, 0, 0, 0.836);
+  text-align: justify;
+  padding: 10px 20px;
+}
+.paraCont h1{
+  padding-bottom: 10px;
+  font-size: 32px;
+  font-weight: 600;
+}
+.cars{
+  position: absolute;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  height: 100vh;
+  width: 100%;
+  border-bottom: 2px solid gray;
+  background-color: rgba(0, 0, 0, 0.933);
+  position: relative;
+  display: none;
+}
+.elem{
+  height: calc(100vh/3);
+  width: 100%;
+  border-bottom: 3px solid #eaf4f4;
+  border-top: 3px solid #eaf4f4 ;
+  padding: 20px;
+  /* display: flex; */
+  position: relative;
+  transition: all linear 0.3s;
+}
+.elem h1{
+  font-size: 100px;
+  position: relative;
+  z-index: 9;
+  mix-blend-mode: difference;
+}
+.suvImage{
+  height: 150px;
+  width: 200px;
+ border-radius: 50%;
+ object-fit: cover;
+ object-position: center;
+ position: absolute;
+ opacity: 0;
+ transform: translate(-50%,-50%);
+}
+.sedanImage{
+  height: 150px;
+  width: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  opacity: 0;
+  transform: translate(-90%,-180%);
+}
+.sportsImage{
+  height: 150px;
+  width: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  opacity: 0;
+  transform: translate(-50%,-300%);
 }
 
+h2:hover{
+  cursor: pointer;
+}
+.footer{
+  height: 350px;
+  width: 100%;
+  background-color: #262626;
+  display: flex;
+  padding: 30px;
+  padding-left: 350px;
+  padding-right: 350px;
+  align-items: first baseline;
+  justify-content: space-between;
+}
+.footer h3{
+  border-bottom: 2px solid #353535;
+  margin-bottom: 15px;
+  padding: 15px;
+}
+.footer h4{
+  margin-bottom: 15px;
+  color: #6c6c6c;
+}
+.footer h4:hover{
+  color: #eaf4f4;
+  cursor: pointer;
+}
 @media (max-width: 600px) {
+  body{
+    object-fit: cover;
+    background-size: cover;
+  }
   .items {
     display: none;
   }
   .icon {
     display: block;
   }
+  .content{
+    height: 150vh;
+    width: 100%;
+  }
+  .para{
+    width: 100vw;
+    height: 100vh;
+  } 
+  .explore{
+    flex-wrap: wrap;
+  }
+  .footer{
+    height: 90vh;
+    flex-wrap: wrap;
+    padding-left: 35px;
+  padding-right: 35px;
+  }
 }
+
